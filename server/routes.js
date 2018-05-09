@@ -1,10 +1,15 @@
 import express from 'express';
 
 //controller imports
-import basicController from './controllers/basicController';
+import controllerBasic from './controllers/controllerBasic';
+import controllerUser from './controllers/controllerUser';
 
 const routes = express();
 
-routes.get('/', basicController.get)
+// Basic Routes
+routes.get('/', controllerBasic.get)
+
+// User Routes
+routes.post('/signup', controllerUser.post);
 
 export default routes;
