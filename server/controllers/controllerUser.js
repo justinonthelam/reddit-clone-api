@@ -3,7 +3,7 @@ import db from './../models';
 const controllerUser = {};
 
 controllerUser.post = (req, res) => {
-    const { username, password } = req.body;
+    const { username, password } = req.body
 
     //validation
 
@@ -21,7 +21,7 @@ controllerUser.post = (req, res) => {
         res.status(500).json({
             message: err,
         })
-    });
+    })
 }
 
 export default controllerUser;
