@@ -35,7 +35,7 @@ controllerPost.post = (req, res) => {
 controllerPost.getAll = (req, res) => {
     db.Post.find({}).populate({
         path: '_creator',
-        select: 'username'
+        select: 'username createdAt'
     }).then((posts) => {
         return res.status(200).json({
             success: true,
